@@ -1,0 +1,24 @@
+{
+  "name": "nodeunit-to-tape",
+  "version": "1.0.1",
+  "description": "nodeunit to tape test converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andineck/nodeunit-to-tape.git"
+  },
+  "keywords": [
+    "nodeunit",
+    "tape",
+    "converter"
+  ],
+  "author": "Andi Neck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andineck/nodeunit-to-tape/issues"
+  },
+  "homepage": "https://github.com/andineck/nodeunit-to-tape"
+}
