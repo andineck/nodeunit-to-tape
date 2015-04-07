@@ -1,6 +1,6 @@
 {
   "name": "nodeunit-to-tape",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "nodeunit to tape test converter",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/andineck/nodeunit-to-tape/issues"
   },
-  "homepage": "https://github.com/andineck/nodeunit-to-tape"
+  "homepage": "https://github.com/andineck/nodeunit-to-tape",
+  "dependencies": {
+    "event-stream": "^3.3.0"
+  }
 }
