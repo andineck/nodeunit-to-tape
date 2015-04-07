@@ -1,10 +1,10 @@
 {
   "name": "nodeunit-to-tape",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "nodeunit to tape test converter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js test/test-input.js test/test-output.js"
   },
   "repository": {
     "type": "git",
