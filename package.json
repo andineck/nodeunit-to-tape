@@ -1,6 +1,6 @@
 {
   "name": "nodeunit-to-tape",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "nodeunit to tape test converter",
   "main": "index.js",
   "scripts": {

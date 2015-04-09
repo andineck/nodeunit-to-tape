@@ -19,6 +19,7 @@ if (!module.parent) {
 module.exports = convertStream;
 function convertStream(input, output) {
 
+  // testest because test is replaced with t later.
   var test = 'var testest = require(\'tape\');\n';
   var l = 0;
 
@@ -37,6 +38,7 @@ function convertStream(input, output) {
     .pipe(es.replace('test', 't'))
     .pipe(es.replace('t.expect', 't.plan'))
     .pipe(es.replace('t.done', 't.end'))
+    .pipe(es.replace('equals(err, null)', 'false(err)'))
     .pipe(es.replace('exports[', 'test('))
     .pipe(es.replace('exports.', 'test('))
     .pipe(es.replace('] = function', ', function'))

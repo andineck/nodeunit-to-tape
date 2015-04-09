@@ -1,5 +1,5 @@
 var test = require('tape');
-var async = require('utils-async/series');
+var async = require('../series');
 
 if (!Function.prototype.bind) {
     Function.prototype.bind = function (thisArg) {
@@ -90,7 +90,7 @@ test('series function alias', function(t){
       }
     ],
     function(err, results){
-      t.equals(err, null);
+      t.false(err);
       t.same(results, [1,2,[3,3]]);
       t.same(call_order, [1,2,3]);
       t.end();
@@ -120,7 +120,7 @@ test('series', function(t){
         }
     ],
     function(err, results){
-        t.equals(err, null);
+        t.false(err);
         t.same(results, [1,2,[3,3]]);
         t.same(call_order, [1,2,3]);
         t.end();
@@ -129,7 +129,7 @@ test('series', function(t){
 
 test('series empty array', function(t){
     async.series([], function(err, results){
-        t.equals(err, null);
+        t.false(err);
         t.same(results, []);
         t.end();
     });
@@ -162,7 +162,7 @@ test('series no callback', function(t){
 test('series object', function(t){
     var call_order = [];
     async.series(getFunctionsObject(call_order), function(err, results){
-        t.equals(err, null);
+        t.false(err);
         t.same(results, {
             one: 1,
             two: 2,
